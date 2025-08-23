@@ -23,6 +23,9 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizePackageImports: ["@chakra-ui/react"],
+  },
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
