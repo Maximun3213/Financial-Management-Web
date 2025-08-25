@@ -20,7 +20,13 @@ function Header(): React.JSX.Element {
   };
 
   return (
-    <Flex as={"header"} justifyContent={"space-between"} w={"100%"}>
+    <Flex
+      as={"header"}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      my={"3rem"}
+      w={"100%"}
+    >
       <Heading
         as={TypoTagHeading.h1}
         size={25}

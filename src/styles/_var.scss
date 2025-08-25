@@ -11,11 +11,6 @@
   // --secondary-color: #29a073;
   --dark: #1b212d;
   --secondary-text-color: #929eae;
-  // --gray: #fafafa;
-  // --dark: #1e1c30;
-  // --black: #000;
-
-  // --main-background: #fafafa;
 }
 
 html[data-theme="light"] {
@@ -23,7 +18,7 @@ html[data-theme="light"] {
   --bg-sidebar: #fafafa;
 
   --primary-text-color: #1b212d;
-  --secondary-text-color: #929eae;
+  // --secondary-text-color: #929eae;
   --bg-card: #fafafa;
 
   --black: #000;
@@ -39,7 +34,7 @@ html[data-theme="dark"] {
   --bg-sidebar: #1e1c30;
 
   --primary-text-color: #fff;
-  --secondary-text-color: #929eae;
+  // --secondary-text-color: #929eae;
   --bg-card: #201e34;
 
   --black: #1a1a1a;
