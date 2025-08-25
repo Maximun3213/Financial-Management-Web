@@ -48,7 +48,11 @@ export function useColorModeValue<T>(light: T, dark: T) {
 
 export function ColorModeIcon() {
   const { colorMode } = useColorMode();
-  return colorMode === "dark" ? <LuMoon /> : <LuSun />;
+  return colorMode === "dark" ? (
+    <LuMoon color="#929EAE" />
+  ) : (
+    <LuSun color="#929EAE" />
+  );
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
@@ -67,11 +71,13 @@ export const ColorModeButton = React.forwardRef<
         aria-label="Toggle color mode"
         size="sm"
         ref={ref}
+        bg={"transparent"}
         {...props}
         css={{
           _icon: {
-            width: "5",
-            height: "5",
+            width: "2.2rem",
+            height: "2.2rem",
+            cursor: "pointer",
           },
         }}
       >

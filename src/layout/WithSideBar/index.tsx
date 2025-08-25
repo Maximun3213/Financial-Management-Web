@@ -1,3 +1,5 @@
+import { Container } from "@/components/Container";
+import Header from "@/layout/Header";
 import { Box } from "@chakra-ui/react";
 import Sidebar from "@Layout/Sidebar";
 import React from "react";
@@ -15,7 +17,12 @@ export default function WithSideBar({
       minH={"100vh"}
     >
       <Sidebar />
-      <Box>{children}</Box>
+      <Container>
+        <Box w={"100%"} h={"100%"} pt={"3rem"}>
+          <Header />
+          {children}
+        </Box>
+      </Container>
     </Box>
   );
 }
