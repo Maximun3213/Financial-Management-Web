@@ -15,7 +15,7 @@ export default function WithSideBar({
       minH={"100vh"}
     >
       <Sidebar />
-      <Box bg={"orange"}>{children}</Box>
+      <Box>{children}</Box>
     </Box>
   );
 }

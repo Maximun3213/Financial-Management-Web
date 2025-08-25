@@ -1,13 +1,7 @@
 import cn from "classnames";
 import React from "react";
 
-import {
-  FontFamily,
-  FontWeight,
-  TypoColor,
-  TypoElement,
-  TypoTagLabel,
-} from "@/enums/typo";
+import { FontWeight, TypoColor, TypoElement, TypoTagLabel } from "@/enums/typo";
 
 import { Text, TextProps } from "@chakra-ui/react";
 import styles from "./styles.module.scss";
@@ -25,7 +19,6 @@ const Label = ({ ...props }: LabelProps): React.JSX.Element => {
     size = 18,
     as = TypoTagLabel.span,
     fontWeight = FontWeight.normal,
-    fontFamily = FontFamily.genist_sans,
     className,
     children,
     ...restProps
@@ -44,7 +37,6 @@ const Label = ({ ...props }: LabelProps): React.JSX.Element => {
       ref={ref as React.Ref<HTMLParagraphElement>}
       as={as}
       fontWeight={fontWeight}
-      fontFamily={fontFamily}
       className={textClassNames}
     >
       {children}

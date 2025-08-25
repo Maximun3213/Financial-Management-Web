@@ -1,12 +1,6 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Kumbh_Sans } from "next/font/google";
 
-
-export const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const kumbhSans = Kumbh_Sans({
   subsets: ["latin"],
-});
-
-export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });

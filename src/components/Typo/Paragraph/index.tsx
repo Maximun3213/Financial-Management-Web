@@ -2,10 +2,9 @@ import cn from "classnames";
 import React from "react";
 
 import {
-  FontFamily,
   FontWeight,
   TypoColor,
-  TypoTagParagraph,
+  TypoTagParagraph
 } from "@/enums/typo";
 
 import { Text, TextProps } from "@chakra-ui/react";
@@ -24,7 +23,6 @@ const Paragraph = ({ ...props }: BodyProps): React.JSX.Element => {
     size = 18,
     as = TypoTagParagraph.div,
     fontWeight = FontWeight.normal,
-    fontFamily = FontFamily.genist_sans,
     className,
     children,
     ...restProps
@@ -43,7 +41,6 @@ const Paragraph = ({ ...props }: BodyProps): React.JSX.Element => {
       ref={ref}
       as={as}
       fontWeight={fontWeight}
-      fontFamily={fontFamily}
       className={textClassNames}
     >
       {children}

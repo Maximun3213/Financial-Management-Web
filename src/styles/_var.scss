@@ -15,10 +15,14 @@
   --gray: #fafafa;
   --dark: #1e1c30;
   --black: #000;
+
+  --main-background: #fafafa;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --main-background: #1e1c30;
+
     --primary-color: #00bfff;
     --black: #1a1a1a;
     --white: #f0f0f0;

@@ -35,7 +35,6 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@preact/signals-react": "^3.0.1",
-    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -62,7 +61,6 @@
     "path": "^0.12.7",
     "prettier": "3.5.3",
     "sass": "^1.86.0",
-    "tailwindcss": "^4",
     "typescript": "^5"
   },
   "postinstall": "husky install"

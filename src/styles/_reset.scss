@@ -123,7 +123,7 @@ body {
   scroll-behavior: unset !important;
   overscroll-behavior-y: none !important;
   min-height: -webkit-fill-available;
-  font-family: var(--font-PPNeueMontreal);
+  font-family: var(--font-kumbh-sans);
   background-color: var(--main-background);
   color: var(--white);
 
@@ -150,7 +150,7 @@ body {
   line-height: 110%;
   font-weight: normal;
   font-size: rem(16px);
-  background-color: var(--dark-grey);
+  background-color: var(--main-background);
   transition: background-color 0.4s var(--easeInOutQuart);
 }
 

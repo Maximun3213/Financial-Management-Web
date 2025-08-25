@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@/constants/fonts";
+import { kumbhSans } from "@/constants/fonts";
 import { metadataConfig } from "@/constants/metadata";
 import "@/styles/app.scss";
 import MainLayout from "@Layout/MainLayout";
@@ -26,9 +26,7 @@ export default function RootLayout({
           <Script src="https://unpkg.com/react-scan/dist/auto.global.js"></Script>
         )}
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${kumbhSans.className} antialiased`}>
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

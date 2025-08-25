@@ -1,12 +1,7 @@
 import cn from "classnames";
 import React from "react";
 
-import {
-  FontFamily,
-  FontWeight,
-  TypoColor,
-  TypoTagHeading,
-} from "@/enums/typo";
+import { FontWeight, TypoColor, TypoTagHeading } from "@/enums/typo";
 
 import { Text, TextProps } from "@chakra-ui/react";
 import styles from "./styles.module.scss";
@@ -24,7 +19,6 @@ const Heading = ({ ...props }: HeadingProps): React.JSX.Element => {
     size = 72,
     as = TypoTagHeading.h1,
     fontWeight = FontWeight.normal,
-    fontFamily = FontFamily.genist_sans,
     children,
     className,
     ...restProps
@@ -43,7 +37,6 @@ const Heading = ({ ...props }: HeadingProps): React.JSX.Element => {
       ref={ref}
       as={as}
       fontWeight={fontWeight}
-      fontFamily={fontFamily}
       className={textClassNames}
     >
       {children}

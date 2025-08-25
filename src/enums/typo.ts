@@ -34,10 +34,7 @@ export enum TypoTagLabel {
   label = 'label',
 }
 
-export enum FontFamily {
-  genist_sans = 'geist-sans',
-  genist_mono = 'geist-mono',
-}
+
 
 export type TypoElement =
   | HTMLSpanElement
@@ -51,5 +48,4 @@ export type TextPropsBase = PropsWithChildren & {
   className?: string;
   color?: TypoColor;
   fontWeight?: FontWeight;
-  font?: FontFamily;
 };
