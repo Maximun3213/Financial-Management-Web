@@ -3,8 +3,10 @@ import { PropsWithChildren } from 'react';
 export enum TypoColor {
   white = 'white',
   black = 'black',
+  dark = 'dark',
   blue = 'blue',
   primaryTextColor = 'primary-text-color',
+  secondaryTextColor = 'secondary-text-color',
 }
 
 export enum FontWeight {

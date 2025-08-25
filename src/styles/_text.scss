@@ -12,6 +12,10 @@
   color: var(--black);
 }
 
+.text__dark {
+  color: var(--dark);
+}
+
 .text__white {
   color: var(--white);
 }
@@ -22,4 +26,8 @@
 
 .text__primary-text-color {
   color: var(--primary-text-color);
+}
+
+.text__secondary-text-color {
+  color: var(--secondary-text-color);
 }
