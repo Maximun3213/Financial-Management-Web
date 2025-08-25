@@ -5,14 +5,13 @@ import { TypoColor, TypoTagHeading } from "@/enums/typo";
 import React from "react";
 
 import SvgInsert from "@/components/SvgInsert";
-import { ColorModeButton, useColorMode } from "@/components/ui/color-mode";
+import { ColorModeButton } from "@/components/ui/color-mode";
 import { Button, Flex } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
 import User from "./User";
 
 function Header(): React.JSX.Element {
   const pathname = usePathname();
-  const { toggleColorMode } = useColorMode();
 
   const generateTitle = () => {
     if (pathname === "/") return "Dashboard";
@@ -33,7 +32,7 @@ function Header(): React.JSX.Element {
       </Heading>
 
       <Flex alignItems={"center"} gap={"4.5rem"}>
-        <Button onClick={toggleColorMode} bg={"transparent"}>
+        <Button bg={"transparent"}>
           <SvgInsert
             src="/icons/ic_notify.svg"
             width={"2.4rem"}

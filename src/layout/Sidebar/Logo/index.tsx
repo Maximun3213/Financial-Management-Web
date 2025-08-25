@@ -1,9 +1,18 @@
 import SvgInsert from "@/components/SvgInsert";
 import { useColorMode } from "@/components/ui/color-mode";
-import { Box } from "@chakra-ui/react";
+import { Box, ClientOnly, Skeleton } from "@chakra-ui/react";
 import classNames from "classnames";
 import React from "react";
+
 function Logo(): React.ReactElement {
+  return (
+    <ClientOnly fallback={<Skeleton width="12.2rem" height="3rem" />}>
+      <LogoContent />
+    </ClientOnly>
+  );
+}
+
+function LogoContent(): React.ReactElement {
   const { colorMode } = useColorMode();
 
   return (

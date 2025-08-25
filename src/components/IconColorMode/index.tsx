@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, ClientOnly, Skeleton } from "@chakra-ui/react";
 import classNames from "classnames";
 import SvgInsert from "../SvgInsert";
 import { useColorMode } from "../ui/color-mode";
@@ -9,6 +9,14 @@ type Props = {
 };
 
 function IconColorMode({ src, size = 2 }: Props): React.ReactElement {
+  return (
+    <ClientOnly fallback={<Skeleton boxSize={`${size}rem`} />}>
+      <IconColorModeContent src={src} size={size} />
+    </ClientOnly>
+  );
+}
+
+function IconColorModeContent({ src, size = 2 }: Props): React.ReactElement {
   const { colorMode } = useColorMode();
   return (
     <Box
