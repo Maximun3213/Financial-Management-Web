@@ -1,4 +1,4 @@
-@use 'tool' as *;
+@use "tool" as *;
 
 * {
   margin: 0;
@@ -141,7 +141,7 @@ video::-webkit-media-controls {
   display: none;
 }
 
-img:is([loading='lazy']) {
+img:is([loading="lazy"]) {
   background-repeat: no-repeat;
   background-size: cover;
 }

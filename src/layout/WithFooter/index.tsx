@@ -1,5 +1,5 @@
-import React from 'react';
-import Footer from '@Layout/Footer';
+import Footer from "@Layout/Footer";
+import React from "react";
 
 export default function WithFooter({
   children,

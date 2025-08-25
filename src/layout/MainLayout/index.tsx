@@ -1,7 +1,5 @@
-import Animation from "@/animation";
 import { Provider } from "@/components/ui/provider";
 import GridDebug from "@Components/GridDebug";
-import Header from "@Layout/Header";
 import React, { PropsWithChildren } from "react";
 
 export default function MainLayout({
@@ -9,11 +7,8 @@ export default function MainLayout({
 }: PropsWithChildren): React.ReactElement {
   return (
     <Provider>
-      <Animation>
-        <Header />
-        {children}
-        <GridDebug />
-      </Animation>
+      {children}
+      <GridDebug />
     </Provider>
   );
 }

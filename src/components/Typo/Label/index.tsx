@@ -1,20 +1,20 @@
-import cn from 'classnames';
-import React from 'react';
+import cn from "classnames";
+import React from "react";
 
 import {
-  TextPropsBase,
+  FontFamily,
+  FontWeight,
   TypoColor,
   TypoElement,
-  TypoFontFamily,
   TypoTagLabel,
-  TypoWeight,
-} from '@/enums/typo';
+} from "@/enums/typo";
 
-import styles from './styles.module.scss';
+import { Text, TextProps } from "@chakra-ui/react";
+import styles from "./styles.module.scss";
 
-interface LabelProps extends TextPropsBase {
+interface LabelProps extends TextProps {
   size?: 200 | 64 | 28 | 24 | 20 | 18 | 16 | 14;
-  tag?: TypoTagLabel;
+  as?: TypoTagLabel;
   ref?: React.Ref<TypoElement>;
 }
 
@@ -23,10 +23,9 @@ const Label = ({ ...props }: LabelProps): React.JSX.Element => {
     ref,
     color = TypoColor.black,
     size = 18,
-    tag: Tag = TypoTagLabel.span,
-    weight = TypoWeight.normal,
-    font = TypoFontFamily.genist_sans,
-    transform,
+    as = TypoTagLabel.span,
+    fontWeight = FontWeight.normal,
+    fontFamily = FontFamily.genist_sans,
     className,
     children,
     ...restProps
@@ -35,19 +34,21 @@ const Label = ({ ...props }: LabelProps): React.JSX.Element => {
   const textClassNames = cn(
     styles.text,
     styles[`text__${size}`],
-    `font__${font}`,
     `text__${color}`,
-    weight && `text__${weight}`,
-    transform && `text__${transform}`,
     className
   );
 
   return (
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
-    <Tag {...restProps} ref={ref} className={textClassNames}>
+    <Text
+      {...restProps}
+      ref={ref as React.Ref<HTMLParagraphElement>}
+      as={as}
+      fontWeight={fontWeight}
+      fontFamily={fontFamily}
+      className={textClassNames}
+    >
       {children}
-    </Tag>
+    </Text>
   );
 };
 

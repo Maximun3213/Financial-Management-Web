@@ -6,19 +6,13 @@ export enum TypoColor {
   blue = 'blue',
 }
 
-export enum TypoWeight {
+export enum FontWeight {
   light = 'light', // 300
   normal = 'normal', // 400
   medium = 'medium', // 500
   semibold = 'semibold', // 600
   bold = 'bold', // 700
   extrabold = 'extrabold', // 800
-}
-
-export enum TypoTransform {
-  uppercase = 'uppercase',
-  lowercase = 'lowercase',
-  capitalize = 'capitalize',
 }
 
 export enum TypoTagHeading {
@@ -40,7 +34,7 @@ export enum TypoTagLabel {
   label = 'label',
 }
 
-export enum TypoFontFamily {
+export enum FontFamily {
   genist_sans = 'geist-sans',
   genist_mono = 'geist-mono',
 }
@@ -56,7 +50,6 @@ export type TypoElement =
 export type TextPropsBase = PropsWithChildren & {
   className?: string;
   color?: TypoColor;
-  weight?: TypoWeight;
-  transform?: TypoTransform;
-  font?: TypoFontFamily;
+  fontWeight?: FontWeight;
+  font?: FontFamily;
 };

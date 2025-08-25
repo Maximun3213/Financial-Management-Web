@@ -14,4 +14,13 @@
   --secondary-text-color: #929eae;
   --gray: #fafafa;
   --dark: #1e1c30;
+  --black: #000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #00bfff;
+    --black: #1a1a1a;
+    --white: #f0f0f0;
+  }
 }
