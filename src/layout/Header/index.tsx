@@ -8,6 +8,7 @@ import SvgInsert from "@/components/SvgInsert";
 import { ColorModeButton, useColorMode } from "@/components/ui/color-mode";
 import { Button, Flex } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
+import User from "./User";
 
 function Header(): React.JSX.Element {
   const pathname = usePathname();
@@ -40,6 +41,7 @@ function Header(): React.JSX.Element {
           />
         </Button>
         <ColorModeButton />
+        <User />
       </Flex>
     </Flex>
   );

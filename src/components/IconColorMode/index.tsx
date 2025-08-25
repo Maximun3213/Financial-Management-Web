@@ -18,7 +18,7 @@ function IconColorMode({ src, size = 2 }: Props): React.ReactElement {
         colorMode === "dark" ? "ic_color_light" : "ic_color_dark"
       )}
       css={{
-        svg: {
+        "& svg": {
           width: "100%",
           height: "100%",
         },
