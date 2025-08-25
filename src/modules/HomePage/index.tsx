@@ -1,19 +1,32 @@
 "use client";
 
-import Heading from "@/components/Typo/Heading";
-import { TypoColor } from "@/enums/typo";
+import { Box, Flex } from "@chakra-ui/react";
 import WithSideBar from "@Layout/WithSideBar";
 import React from "react";
-import s from "./styles.module.scss";
+import MoneyCards from "./MoneyCards";
 
 function HomePage(): React.ReactElement {
   return (
     <WithSideBar>
-      <div className={s.wrapper}>
-        <Heading size={60} color={TypoColor.primaryTextColor}>
-          Hello World !
-        </Heading>
-      </div>
+      <Box display={"grid"} gridTemplateColumns={"71.7rem 1fr"} gap={"4rem"}>
+        <Flex flexDirection={"column"} gap={"3rem"}>
+          <MoneyCards />
+          <Box bg="red" w={"100%"}>
+            2
+          </Box>
+          <Box bg="red" w={"100%"}>
+            3
+          </Box>
+        </Flex>
+        <Flex flexDirection={"column"} gap={"3rem"}>
+          <Box bg="red" w={"100%"}>
+            1
+          </Box>
+          <Box bg="red" w={"100%"}>
+            2
+          </Box>
+        </Flex>
+      </Box>
     </WithSideBar>
   );
 }
