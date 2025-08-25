@@ -124,8 +124,7 @@ body {
   overscroll-behavior-y: none !important;
   min-height: -webkit-fill-available;
   font-family: var(--font-kumbh-sans);
-  background-color: var(--main-background);
-  color: var(--white);
+  color: var(--primary-text-color);
 
   ::-webkit-scrollbar {
     display: none;

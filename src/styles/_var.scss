@@ -2,7 +2,6 @@
 
 :root {
   --grid-gap-mobile-x: #{rem(16px)};
-
   --grid-gap-x: #{rem(24px)};
 
   --white: #ffffff;
@@ -19,12 +18,30 @@
   --main-background: #fafafa;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --main-background: #1e1c30;
+html[data-theme="light"] {
+  --main-background: #fafafa;
 
-    --primary-text-color: #fff;
-    --black: #1a1a1a;
-    --white: #f0f0f0;
-  }
+  --primary-text-color: #1b212d;
+  --secondary-text-color: #929eae;
+
+  --black: #000;
+  --white: #ffffff;
+  --gray: #fafafa;
+  --primary-color: #c8ee44;
+  --secondary-color: #29a073;
+  --blue: #0000ff;
+}
+
+html[data-theme="dark"] {
+  --main-background: #1e1c30;
+
+  --primary-text-color: #fff;
+  --secondary-text-color: #929eae;
+
+  --black: #1a1a1a;
+  --white: #f0f0f0;
+  --gray: #232136;
+  --primary-color: #c8ee44;
+  --secondary-color: #29a073;
+  --blue: #5a8cff;
 }

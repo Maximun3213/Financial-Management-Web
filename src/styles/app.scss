@@ -1,4 +1,4 @@
-@forward "reset";
-@forward "var";
-@forward "global";
-@forward "text";
+@use "reset" as *;
+@use "var" as *;
+@use "global" as *;
+@use "text" as *;

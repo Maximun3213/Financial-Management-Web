@@ -1,13 +1,16 @@
-import { Box } from "@chakra-ui/react";
-import { useTheme } from "next-themes";
+import { ColorModeIcon, useColorMode } from "@/components/ui/color-mode";
+import { Box, Button } from "@chakra-ui/react";
 import React from "react";
+import Logo from "./Logo";
 
 function Sidebar(): React.ReactElement {
-  const { resolvedTheme } = useTheme();
-  console.log(resolvedTheme);
+  const { toggleColorMode } = useColorMode();
   return (
     <Box bg={"var(--main-background)"} w={"100%"} h={"100vh"} p={"3rem 2.5rem"}>
-      Sidebar
+      <Logo />
+      <Button onClick={toggleColorMode}>
+        <ColorModeIcon />
+      </Button>
     </Box>
   );
 }
