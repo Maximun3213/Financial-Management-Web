@@ -1,31 +1,19 @@
 import SvgInsert from "@/components/SvgInsert";
-import { useColorMode } from "@/components/ui/color-mode";
-import { Box, ClientOnly, Skeleton } from "@chakra-ui/react";
-import classNames from "classnames";
+import { Box } from "@chakra-ui/react";
 import React from "react";
 
 function Logo(): React.ReactElement {
   return (
-    <ClientOnly fallback={<Skeleton width="12.2rem" height="3rem" />}>
-      <LogoContent />
-    </ClientOnly>
-  );
-}
-
-function LogoContent(): React.ReactElement {
-  const { colorMode } = useColorMode();
-
-  return (
     <Box
       width={"12.2rem"}
       height={"3rem"}
-      className={classNames(
-        colorMode === "dark" ? "ic_color_light" : "ic_color_dark"
-      )}
       css={{
         "& svg": {
           width: "100%",
           height: "100%",
+        },
+        "& svg path": {
+          fill: "var(--primary-text-color)",
         },
       }}
     >
