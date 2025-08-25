@@ -12,9 +12,10 @@ function HomePage(): React.ReactElement {
   return (
     <WithSideBar>
       <Header />
+
       <Container>
         <div className={s.wrapper}>
-          <Heading size={60} color={TypoColor.black}>
+          <Heading size={60} color={TypoColor.primaryTextColor}>
             Hello
           </Heading>
         </div>

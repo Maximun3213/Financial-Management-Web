@@ -38,7 +38,7 @@ export default function GridDebug(): React.ReactElement {
   }, [handleKeyDown, isGrid]);
 
   return (
-    <div className={cn(s.gridDebug, !isGrid && "hidden")}>
+    <div className={cn(s.gridDebug, !isGrid && s.hidden)}>
       <Container>
         <div className={s.grid_container}>
           {Array.from({ length: 12 }).map((_, index) => (

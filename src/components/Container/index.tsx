@@ -20,14 +20,16 @@ export const GridContainer = ({
   className,
 }: Props): React.JSX.Element => {
   return (
-    <div
-      className={cn(
-        "grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12",
-        s.container_grid,
-        className
-      )}
+    <Box
+      display={"grid"}
+      gridTemplateColumns={{
+        base: "repeat(4, 1fr)",
+        md: "repeat(8, 1fr)",
+        lg: "repeat(12, 1fr)",
+      }}
+      className={cn(s.container_grid, className)}
     >
       {children}
-    </div>
+    </Box>
   );
 };
