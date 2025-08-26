@@ -1,0 +1,30 @@
+.card {
+  --bg-card: #f8f8f8;
+  --bg-card-icon: #ebe8e8;
+  --fill-icon: #363a3f;
+
+  &.dark {
+    --bg-card: #201e34;
+    --bg-card-icon: #292642;
+  }
+  &_inner {
+    background-color: var(--bg-card);
+    &.active {
+      --bg-card: #363a3f;
+      --bg-card-icon: #4e5257;
+      --fill-icon: var(--primary-color);
+      --balance-color: #fff;
+    }
+    &_icon {
+      background-color: var(--bg-card-icon);
+      & svg {
+        & path {
+          fill: var(--fill-icon);
+        }
+      }
+    }
+    &_balance {
+      color: var(--balance-color) !important;
+    }
+  }
+}

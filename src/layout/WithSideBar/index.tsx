@@ -18,7 +18,7 @@ export default function WithSideBar({
     >
       <Sidebar />
       <Container>
-        <Box w={"100%"} h={"100%"}>
+        <Box w={"100%"}>
           <Header />
           {children}
         </Box>

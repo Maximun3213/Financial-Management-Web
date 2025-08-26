@@ -1,2 +1,8 @@
+.cards {
+}
+
 .card {
+  &.active {
+    // background-color: var(--bg-color);
+  }
 }
