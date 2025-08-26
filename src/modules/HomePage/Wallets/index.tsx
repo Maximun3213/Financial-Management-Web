@@ -1,3 +1,4 @@
+import MasterCard from "@/components/MasterCard";
 import SvgInsert from "@/components/SvgInsert";
 import Label from "@/components/Typo/Label";
 import { TypoColor } from "@/enums/typo";
@@ -24,7 +25,9 @@ function Wallets(): React.ReactElement {
           <SvgInsert src={"/icons/ic_dot.svg"} />
         </Box>
       </Flex>
-      <Box mt="1.5rem">cards</Box>
+      <Box mt="1.5rem">
+        <MasterCard />
+      </Box>
     </Box>
   );
 }

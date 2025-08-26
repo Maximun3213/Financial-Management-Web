@@ -5,6 +5,7 @@ export enum TypoColor {
   black = 'black',
   dark = 'dark',
   blue = 'blue',
+  gray = 'gray',
   primaryTextColor = 'primary-text-color',
   secondaryTextColor = 'secondary-text-color',
   secondaryColor = 'secondary-color',
@@ -37,6 +38,7 @@ export enum TypoTagParagraph {
 export enum TypoTagLabel {
   span = 'span',
   label = 'label',
+  div = 'div',
 }
 
 
