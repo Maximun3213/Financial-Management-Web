@@ -8,6 +8,7 @@ export enum TypoColor {
   primaryTextColor = 'primary-text-color',
   secondaryTextColor = 'secondary-text-color',
   secondaryColor = 'secondary-color',
+  headerTextTable = 'header-text-table',
 }
 
 export enum FontWeight {

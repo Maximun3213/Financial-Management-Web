@@ -40,7 +40,7 @@ function ScheduledTransfersCard({ isLast }: Props): React.ReactElement {
               size={12}
               fontWeight={500}
             >
-              saleh@gmail.com
+              April 25, 2022 at 11:00
             </Label>
           </Flex>
         </Flex>
