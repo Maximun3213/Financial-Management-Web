@@ -6,6 +6,14 @@
   &.dark {
     --bg-card: #201e34;
     --bg-card-icon: #292642;
+    --fill-icon: #fff;
+
+    & .active {
+      --bg-card: #282541;
+      --bg-card-icon: #353255;
+      --fill-icon: var(--primary-color);
+      --balance-color: #fff;
+    }
   }
   &_inner {
     background-color: var(--bg-card);

@@ -4,6 +4,7 @@ import { Box, Flex } from "@chakra-ui/react";
 import WithSideBar from "@Layout/WithSideBar";
 import React from "react";
 import MoneyCards from "./MoneyCards";
+import Wallets from "./Wallets";
 
 function HomePage(): React.ReactElement {
   return (
@@ -19,9 +20,7 @@ function HomePage(): React.ReactElement {
           </Box>
         </Flex>
         <Flex flexDirection={"column"} gap={"3rem"}>
-          <Box bg="red" w={"100%"}>
-            1
-          </Box>
+          <Wallets />
           <Box bg="red" w={"100%"}>
             2
           </Box>
