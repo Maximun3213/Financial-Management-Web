@@ -11,12 +11,11 @@ function MasterCard(): React.ReactElement {
   return (
     <ClientOnly>
       <Box
-        p={"1.9rem 3rem"}
+        p={"1.5rem 2rem"}
         borderRadius={"1.5rem"}
+        backdropFilter={"blur(5px)"}
         bg={
-          theme === "dark"
-            ? "linear-gradient(111deg, #2E2B4A 2.85%, #29263F 128.48%)"
-            : "linear-gradient(104deg, #4A4A49 2.66%, #20201F 90.57%)"
+          "linear-gradient(180deg, rgba(255, 255, 255, 0.40) 0%, rgba(255, 255, 255, 0.10) 100%)"
         }
       >
         <Flex alignItems={"center"} gap={"0.8rem"}>
@@ -28,11 +27,11 @@ function MasterCard(): React.ReactElement {
           >
             Maglo.
           </Label>
-          <Box width={"1px"} height={"2rem"} bg={"#626260"} />
+          <Box width={"1px"} height={"2rem"} bg={"#fff"} />
           <Label
             size={12}
             as={TypoTagLabel.div}
-            color={TypoColor.gray}
+            color={TypoColor.white}
             fontWeight={500}
           >
             Universal Bank
@@ -44,8 +43,8 @@ function MasterCard(): React.ReactElement {
           justifyContent={"space-between"}
         >
           <Box
-            width={"3.8rem"}
-            height={"3rem"}
+            width={"3rem"}
+            height={"2.4rem"}
             css={{
               "& svg": {
                 width: "100%",
@@ -78,15 +77,27 @@ function MasterCard(): React.ReactElement {
           color={TypoColor.white}
           fontWeight={700}
         >
-          5495 7381 3759 2321
+          85952548****
         </Label>
         <Flex mt={"1rem"} justifyContent={"space-between"}>
           <Label size={12} color={TypoColor.gray} fontWeight={500}>
-            04/24
+            09/25
           </Label>
-          <Box width={"4.7rem"} height={"3.6rem"}>
+          <Box
+            width={"3.2rem"}
+            height={"2.1rem"}
+            css={{
+              "& svg": {
+                width: "100%",
+                height: "100%",
+              },
+              "& svg path": {
+                fill: theme === "dark" ? "#fff" : "#1A1F71",
+              },
+            }}
+          >
             <SvgInsert
-              src="/icons/ic_master.svg"
+              src="/icons/ic_visa.svg"
               width={"100%"}
               height={"100%"}
             />
