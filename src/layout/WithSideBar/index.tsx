@@ -17,12 +17,12 @@ export default function WithSideBar({
       minH={"100vh"}
     >
       <Sidebar />
-      <Container>
-        <Box w={"100%"}>
+      <Box w={"100%"} height={"100%"} overflow={"auto"} pb={"3rem"}>
+        <Container>
           <Header />
           {children}
-        </Box>
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 }
