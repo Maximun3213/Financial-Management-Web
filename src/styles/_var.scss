@@ -5,7 +5,7 @@
   --grid-gap-x: #{rem(24px)};
 
   // --primary-color: #c8ee44;
-  // --secondary-color: #29a073;
+  --secondary-color: #29a073;
   --dark: #1b212d;
   --secondary-text-color: #929eae;
 }
@@ -17,12 +17,12 @@ html[data-theme="light"] {
   --primary-text-color: #1b212d;
 
   --bg-card: #fafafa;
+  --border-color: #f5f5f5;
 
   --black: #000;
   --white: #ffffff;
   --gray: #fafafa;
   --primary-color: #c8ee44;
-  --secondary-color: #29a073;
   --blue: #0000ff;
 }
 
@@ -33,11 +33,10 @@ html[data-theme="dark"] {
   --primary-text-color: #fff;
 
   --bg-card: #201e34;
-
+  --border-color: #282541;
   --black: #1a1a1a;
   --white: #f0f0f0;
   --gray: #232136;
   --primary-color: #c8ee44;
-  --secondary-color: #29a073;
   --blue: #5a8cff;
 }
