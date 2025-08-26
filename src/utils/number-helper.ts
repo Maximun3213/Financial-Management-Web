@@ -16,8 +16,13 @@ class NumberHelper {
   }
 
   convertRemToPx(px: number): number {
-    const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
-    return px * rootFontSize;
+    // Check if we're in a browser environment
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const rootFontSize = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      return px * rootFontSize;
+    }
+    // Fallback for SSR - assume 16px as default font size
+    return px * 16;
   }
 }
 
