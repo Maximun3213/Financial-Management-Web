@@ -1,6 +1,7 @@
 "use client";
 
 import useCapitalChartStore from "@/stores/CapitalChart.store";
+import { numberHelper } from "@/utils/number-helper";
 import {
   CategoryScale,
   Chart as ChartJS,
@@ -26,8 +27,11 @@ ChartJS.register(
 
 function Chart() {
   const { data } = useCapitalChartStore();
+
   const options: ChartOptions<"line"> = {
     responsive: true,
+    maintainAspectRatio: false,
+
     interaction: {
       mode: "nearest",
       axis: "x",
@@ -58,7 +62,7 @@ function Chart() {
           stepSize: 2000,
           color: "#929EAE",
           font: {
-            size: 12,
+            size: numberHelper.convertRemToPx(1.2),
           },
           callback: (value: number | string): string => {
             const num = typeof value === "string" ? parseFloat(value) : value;
@@ -82,7 +86,7 @@ function Chart() {
         ticks: {
           color: "#929EAE",
           font: {
-            size: 12,
+            size: numberHelper.convertRemToPx(1.2),
           },
         },
       },

@@ -7,6 +7,7 @@ import Chart from "./Chart";
 
 function Capital(): React.ReactElement {
   const { data } = useCapitalChartStore();
+
   return (
     <Box
       p={"1.5rem 2rem"}
@@ -35,7 +36,15 @@ function Capital(): React.ReactElement {
           ))}
         </Flex>
       </Flex>
-      <Box mt={"3rem"}>
+      <Box
+        mt={"3rem"}
+        h={"19rem"}
+        css={{
+          "& canvas": {
+            height: "100% !important",
+          },
+        }}
+      >
         <Chart />
       </Box>
     </Box>
