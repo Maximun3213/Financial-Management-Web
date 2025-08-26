@@ -8,6 +8,7 @@ interface CapitalChartStore {
 
 const DATA_DEFAULT: ChartData<"line"> = {
   labels: [
+    "",
     "Apr 14",
     "Apr 15",
     "Apr 16",
@@ -19,23 +20,23 @@ const DATA_DEFAULT: ChartData<"line"> = {
   datasets: [
     {
       label: "Income",
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: [4000, 5900, 8000, 8100, 5600, 5500, 4000, 8000],
       borderColor: "#29A073",
       tension: 0.4,
       fill: false,
-      borderWidth: 3,
-      pointRadius: 4,
+      pointRadius: 0,
       pointHoverRadius: 6,
+      pointHoverBackgroundColor: "#29A073",
     },
     {
       label: "Expenses",
-      data: [28, 48, 40, 19, 86, 27, 90],
+      data: [2800, 4800, 4000, 1900, 8600, 2700, 6000, 10000],
       borderColor: "#C8EE44",
       tension: 0.4,
       fill: false,
-      borderWidth: 3,
-      pointRadius: 4,
+      pointRadius: 0,
       pointHoverRadius: 6,
+      pointHoverBackgroundColor: "#C8EE44",
     },
   ],
 };
