@@ -7,7 +7,7 @@ import { Text, TextProps } from "@chakra-ui/react";
 import styles from "./styles.module.scss";
 
 interface LabelProps extends TextProps {
-  size?: 200 | 64 | 28 | 24 | 20 | 18 | 16 | 14;
+  size?: 200 | 64 | 28 | 24 | 20 | 18 | 16 | 14 | 12;
   as?: TypoTagLabel;
   ref?: React.Ref<TypoElement>;
 }
