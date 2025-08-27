@@ -5,9 +5,7 @@ import Search from "./Seach";
 const TransactionsPage = (): React.JSX.Element => {
   return (
     <WithSideBar>
-      <div>
-        <Search />
-      </div>
+      <Search />
     </WithSideBar>
   );
 };

@@ -1,7 +1,17 @@
-import SearchInput from "@/components/SearchInput";
+"use client";
+
+import SearchInput, { TInputRef } from "@/components/SearchInput";
+import { Box } from "@chakra-ui/react";
+import { useRef } from "react";
 
 function Search(): React.ReactElement {
-  return <SearchInput />;
+  const inputRef = useRef<TInputRef>(null);
+
+  return (
+    <Box pb={"2.5rem"} borderBottom={"1px solid var(--border-color)"}>
+      <SearchInput ref={inputRef} />
+    </Box>
+  );
 }
 
 export default Search;

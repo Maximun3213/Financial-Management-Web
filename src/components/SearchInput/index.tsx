@@ -2,10 +2,31 @@
 
 import { Box, Flex, Input } from "@chakra-ui/react";
 import { useTheme } from "next-themes";
+import { useImperativeHandle, useRef } from "react";
 import SvgInsert from "../SvgInsert";
 
-function SearchInput(): React.ReactElement {
+type Props = {
+  ref: React.Ref<TInputRef>;
+};
+
+export type TInputRef = {
+  focus: () => void;
+  getInputValue: () => string | undefined;
+};
+
+function SearchInput({ ref }: Props): React.ReactElement {
   const { theme } = useTheme();
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useImperativeHandle(ref, () => ({
+    focus: () => {
+      inputRef.current?.focus();
+    },
+    getInputValue: () => {
+      return inputRef.current?.value;
+    },
+  }));
+
   return (
     <Flex
       alignItems={"center"}
@@ -31,6 +52,7 @@ function SearchInput(): React.ReactElement {
         <SvgInsert src={"/icons/ic_search.svg"} />
       </Box>
       <Input
+        ref={inputRef}
         placeholder="Search anything on Transactions"
         border={"none"}
         bg={"transparent"}
