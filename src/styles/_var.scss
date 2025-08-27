@@ -25,6 +25,8 @@ html[data-theme="light"] {
 
   --bg-card: #fafafa;
   --border-color: #f5f5f5;
+
+  --input-bg-color: #f8f8f8;
 }
 
 html[data-theme="dark"] {
@@ -36,4 +38,6 @@ html[data-theme="dark"] {
 
   --bg-card: #201e34;
   --border-color: #282541;
+
+  --input-bg-color: #282541;
 }

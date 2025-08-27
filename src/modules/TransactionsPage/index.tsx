@@ -1,12 +1,12 @@
-import HeadingSection from "@/components/HeadingSection";
 import WithSideBar from "@/layout/WithSideBar";
 import React from "react";
+import Search from "./Seach";
 
 const TransactionsPage = (): React.JSX.Element => {
   return (
     <WithSideBar>
       <div>
-        <HeadingSection title="Transactions" />
+        <Search />
       </div>
     </WithSideBar>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import { Box, ClientOnly, Skeleton } from "@chakra-ui/react";
 import classNames from "classnames";
 import SvgInsert from "../SvgInsert";
