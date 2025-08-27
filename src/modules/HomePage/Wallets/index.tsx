@@ -1,8 +1,7 @@
+import HeadingSection from "@/components/HeadingSection";
 import MasterCard from "@/components/MasterCard";
 import SvgInsert from "@/components/SvgInsert";
-import Label from "@/components/Typo/Label";
 import VisaCard from "@/components/VisaCard";
-import { TypoColor } from "@/enums/typo";
 import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 
@@ -10,9 +9,8 @@ function Wallets(): React.ReactElement {
   return (
     <Box>
       <Flex alignItems={"center"} justifyContent={"space-between"} gap={"1rem"}>
-        <Label size={18} fontWeight={600} color={TypoColor.primaryTextColor}>
-          Wallet
-        </Label>
+        <HeadingSection title="Wallet" />
+
         <Box
           width={"2.2rem"}
           height={"2.2rem"}

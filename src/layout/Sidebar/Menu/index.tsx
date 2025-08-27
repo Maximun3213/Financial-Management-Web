@@ -1,3 +1,5 @@
+"use client";
+
 import { ROUTER } from "@/constants/router";
 import { Box, Flex } from "@chakra-ui/react";
 import { usePathname } from "next/navigation";
