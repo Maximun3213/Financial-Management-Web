@@ -9,7 +9,10 @@ function Search(): React.ReactElement {
 
   return (
     <Box pb={"2.5rem"} borderBottom={"1px solid var(--border-color)"}>
-      <SearchInput ref={inputRef} />
+      <SearchInput
+        ref={inputRef}
+        placeholder="Search anything on Transactions"
+      />
     </Box>
   );
 }

@@ -7,6 +7,7 @@ import SvgInsert from "../SvgInsert";
 
 type Props = {
   ref: React.Ref<TInputRef>;
+  placeholder?: string;
 };
 
 export type TInputRef = {
@@ -14,7 +15,7 @@ export type TInputRef = {
   getInputValue: () => string | undefined;
 };
 
-function SearchInput({ ref }: Props): React.ReactElement {
+function SearchInput({ ref, placeholder }: Props): React.ReactElement {
   const { theme } = useTheme();
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -53,7 +54,7 @@ function SearchInput({ ref }: Props): React.ReactElement {
       </Box>
       <Input
         ref={inputRef}
-        placeholder="Search anything on Transactions"
+        placeholder={placeholder}
         border={"none"}
         bg={"transparent"}
         w={"100%"}
