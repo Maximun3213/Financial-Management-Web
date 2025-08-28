@@ -1,8 +1,15 @@
-import { TypoColor } from "@/enums/typo";
-import { Box, Flex, Table } from "@chakra-ui/react";
+import { TypoColor, TypoTagLabel } from "@/enums/typo";
+import { Box, Button, Flex, Table } from "@chakra-ui/react";
 import Image from "next/image";
 import Label from "../Typo/Label";
-function TransactionTable(): React.ReactElement {
+
+type Props = {
+  isTransactionsPage?: boolean;
+};
+
+function TransactionTable({ isTransactionsPage }: Props): React.ReactElement {
+  const textAlign = isTransactionsPage ? "left" : "center";
+
   const items = [
     {
       id: 1,
@@ -12,6 +19,8 @@ function TransactionTable(): React.ReactElement {
       type: "Electronics",
       amount: 420.84,
       date: "14 Apr 2022",
+      invoiceId: "MGL0124877",
+      time: "14:00 PM",
     },
     {
       id: 2,
@@ -21,6 +30,8 @@ function TransactionTable(): React.ReactElement {
       type: "Electronics",
       amount: 420.84,
       date: "14 Apr 2022",
+      invoiceId: "MGL0124877",
+      time: "14:00 PM",
     },
     {
       id: 3,
@@ -30,6 +41,8 @@ function TransactionTable(): React.ReactElement {
       type: "Electronics",
       amount: 420.84,
       date: "14 Apr 2022",
+      invoiceId: "MGL0124877",
+      time: "14:00 PM",
     },
   ];
 
@@ -47,7 +60,7 @@ function TransactionTable(): React.ReactElement {
               NAME/BUSINESS
             </Label>
           </Table.ColumnHeader>
-          <Table.ColumnHeader textAlign="center" pb={"2rem"}>
+          <Table.ColumnHeader textAlign={textAlign} pb={"2rem"}>
             <Label
               color={TypoColor.headerTextTable}
               size={12}
@@ -57,7 +70,7 @@ function TransactionTable(): React.ReactElement {
               TYPE
             </Label>
           </Table.ColumnHeader>
-          <Table.ColumnHeader textAlign="center" pb={"2rem"}>
+          <Table.ColumnHeader textAlign={textAlign} pb={"2rem"}>
             <Label
               color={TypoColor.headerTextTable}
               size={12}
@@ -67,7 +80,7 @@ function TransactionTable(): React.ReactElement {
               AMOUNT
             </Label>
           </Table.ColumnHeader>
-          <Table.ColumnHeader textAlign="center" pb={"2rem"}>
+          <Table.ColumnHeader textAlign={textAlign} pb={"2rem"}>
             <Label
               color={TypoColor.headerTextTable}
               size={12}
@@ -77,6 +90,31 @@ function TransactionTable(): React.ReactElement {
               DATE
             </Label>
           </Table.ColumnHeader>
+
+          {isTransactionsPage && (
+            <>
+              <Table.ColumnHeader textAlign={textAlign} pb={"2rem"}>
+                <Label
+                  color={TypoColor.headerTextTable}
+                  size={12}
+                  fontWeight={600}
+                  textTransform={"uppercase"}
+                >
+                  INVOICE ID
+                </Label>
+              </Table.ColumnHeader>
+              <Table.ColumnHeader textAlign={textAlign} pb={"2rem"}>
+                <Label
+                  color={TypoColor.headerTextTable}
+                  size={12}
+                  fontWeight={600}
+                  textTransform={"uppercase"}
+                >
+                  ACTIONS
+                </Label>
+              </Table.ColumnHeader>
+            </>
+          )}
         </Table.Row>
       </Table.Header>
       <Table.Body>
@@ -130,7 +168,7 @@ function TransactionTable(): React.ReactElement {
               </Flex>
             </Table.Cell>
             <Table.Cell
-              textAlign="center"
+              textAlign={textAlign}
               verticalAlign={"middle"}
               borderBottom={
                 index === items.length - 1
@@ -147,7 +185,7 @@ function TransactionTable(): React.ReactElement {
               </Label>
             </Table.Cell>
             <Table.Cell
-              textAlign="center"
+              textAlign={textAlign}
               verticalAlign={"middle"}
               borderBottom={
                 index === items.length - 1
@@ -164,7 +202,7 @@ function TransactionTable(): React.ReactElement {
               </Label>
             </Table.Cell>
             <Table.Cell
-              textAlign="center"
+              textAlign={textAlign}
               verticalAlign={"middle"}
               borderBottom={
                 index === items.length - 1
@@ -173,13 +211,73 @@ function TransactionTable(): React.ReactElement {
               }
             >
               <Label
-                color={TypoColor.headerTextTable}
+                color={
+                  !isTransactionsPage
+                    ? TypoColor.headerTextTable
+                    : TypoColor.primaryTextColor
+                }
                 size={14}
                 fontWeight={500}
               >
                 {item.date}
               </Label>
+              {isTransactionsPage && (
+                <Label
+                  color={TypoColor.headerTextTable}
+                  size={13}
+                  as={TypoTagLabel.div}
+                  mt={"0.5rem"}
+                >
+                  at {item.time}
+                </Label>
+              )}
             </Table.Cell>
+            {isTransactionsPage && (
+              <>
+                <Table.Cell
+                  textAlign={textAlign}
+                  verticalAlign={"middle"}
+                  borderBottom={
+                    index === items.length - 1
+                      ? "none"
+                      : "1px solid var(--border-color)"
+                  }
+                >
+                  <Label
+                    color={TypoColor.headerTextTable}
+                    size={14}
+                    fontWeight={500}
+                  >
+                    {item.invoiceId}
+                  </Label>
+                </Table.Cell>
+                <Table.Cell
+                  textAlign={textAlign}
+                  verticalAlign={"middle"}
+                  borderBottom={
+                    index === items.length - 1
+                      ? "none"
+                      : "1px solid var(--border-color)"
+                  }
+                >
+                  <Button
+                    fontSize={"1.4rem"}
+                    borderRadius={"0.4rem"}
+                    fontWeight={600}
+                    color={TypoColor.dark}
+                    bg={"var(--primary-color)"}
+                    h={"4rem"}
+                    cursor={"pointer"}
+                    w={"7.4rem"}
+                    _hover={{
+                      bg: "var(--primary-color)",
+                    }}
+                  >
+                    VIEW
+                  </Button>
+                </Table.Cell>
+              </>
+            )}
           </Table.Row>
         ))}
       </Table.Body>

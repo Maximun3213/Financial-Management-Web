@@ -1,3 +1,5 @@
+"use client";
+
 import HeadingSection from "@/components/HeadingSection";
 import Label from "@/components/Typo/Label";
 import { TypoColor } from "@/enums/typo";

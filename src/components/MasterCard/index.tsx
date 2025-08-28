@@ -1,3 +1,5 @@
+"use client";
+
 import { TypoColor, TypoTagLabel } from "@/enums/typo";
 import { Box, ClientOnly, Flex } from "@chakra-ui/react";
 import { useTheme } from "next-themes";
