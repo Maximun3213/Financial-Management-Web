@@ -1,24 +1,16 @@
 "use client";
 
+import PrimaryButton from "@/components/Buttons/PrimaryButton";
+import CInput from "@/components/CInput";
 import Heading from "@/components/Typo/Heading";
 import Paragraph from "@/components/Typo/Paragraph";
 import { TypoColor, TypoTagHeading, TypoTagParagraph } from "@/enums/typo";
-import { Box, Button, Field, Input, Stack } from "@chakra-ui/react";
-import { useFormStatus } from "react-dom";
-
-type FormValues = {
-  email: string;
-  password: string;
-};
+import { Box, Flex } from "@chakra-ui/react";
+import { useLoginForm } from "./useLoginForm";
 
 function LoginForm(): React.ReactElement {
-  const { pending, data, method } = useFormStatus();
-
-  const action = async (formData: FormData) => {
-    const email = formData.get("email");
-    const password = formData.get("password");
-    console.log(email, password);
-  };
+  const { register, handleSubmit, errors, isSubmitting, onSubmit } =
+    useLoginForm();
 
   return (
     <Box w={"40.4rem"}>
@@ -37,24 +29,30 @@ function LoginForm(): React.ReactElement {
       >
         Welcome back! Please enter your details
       </Paragraph>
-      <form action={action}>
-        <Stack gap="4" align="flex-start" maxW="sm">
-          <Field.Root>
-            <Field.Label>Email</Field.Label>
-            <Input name="email" />
-            {/* <Field.ErrorText>{errors.email?.message}</Field.ErrorText> */}
-          </Field.Root>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Flex flexDirection={"column"} gap={"1.5rem"} mt={"2.4rem"}>
+          <CInput
+            register={register}
+            errors={errors}
+            name="email"
+            type="email"
+            label="Email"
+            placeholder="Enter your email"
+          />
 
-          <Field.Root>
-            <Field.Label>Password</Field.Label>
-            <Input name="password" />
-            {/* <Field.ErrorText>{errors.password?.message}</Field.ErrorText> */}
-          </Field.Root>
-
-          <Button type="submit" disabled={pending}>
-            Submit
-          </Button>
-        </Stack>
+          <CInput
+            register={register}
+            errors={errors}
+            name="password"
+            type="password"
+            label="Password"
+            placeholder="Enter your password"
+          />
+          <PrimaryButton
+            text={isSubmitting ? "Signing in..." : "Sign in"}
+            onClick={() => {}}
+          />
+        </Flex>
       </form>
     </Box>
   );
