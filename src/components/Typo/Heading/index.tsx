@@ -7,7 +7,7 @@ import { Text, TextProps } from "@chakra-ui/react";
 import styles from "./styles.module.scss";
 
 interface HeadingProps extends TextProps {
-  size?: 25 | 60 | 64 | 72 | 85 | 88 | 250;
+  size?: 25 | 30 | 60 | 64 | 72 | 85 | 88 | 250;
   as?: TypoTagHeading;
   ref?: React.Ref<HTMLHeadingElement>;
 }
