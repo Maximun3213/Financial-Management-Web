@@ -41,12 +41,19 @@ function CInput<T extends Record<string, unknown>>({
           backgroundColor={"transparent"}
           padding={"1.5rem 2.5rem 1.6rem 2rem"}
           borderRadius={"1rem"}
+          fontSize={"1.4rem"}
+          color={`var(--primary-text-color)`}
+          fontWeight={500}
           border={"1px solid var(--border-color)"}
           _placeholder={{
             color: TypoColor.headerTextTable,
             fontSize: "1.4rem",
             fontWeight: 500,
           }}
+          _focus={{
+            borderColor: "var(--primary-text-color)",
+          }}
+          outline={"none"}
           placeholder={placeholder}
         />
         {errors[name] && (
